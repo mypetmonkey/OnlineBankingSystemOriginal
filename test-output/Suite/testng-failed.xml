@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" parallel="tests" name="Test(failed)">
+    <classes>
+      <class name="Fund_Transfer_Package.FundTransferPom">
+        <methods>
+          <include name="connectdb"/>
+          <include name="fundTransfer"/>
+          <include name="closedb"/>
+          <include name="openBrowser"/>
+          <include name="closebrowser"/>
+        </methods>
+      </class> <!-- Fund_Transfer_Package.FundTransferPom -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

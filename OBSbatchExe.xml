@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Suite">
+  <test thread-count="1" parallel="tests" name="Test">
+    <classes>
+      <class name="Credit_Customer_package.CreditcustomerPom"/>
+      <class name="Open_Account_Packages.AccountOpeningPom"/>
+      <class name="Fund_Transfer_Package.FundTransferPom"/>
+      <class name="view_Active_customer_package.ViewActiveCustomerPom"/>
+      <class name="Apply_Debit_Card__package.ApplydebitcardPom"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
