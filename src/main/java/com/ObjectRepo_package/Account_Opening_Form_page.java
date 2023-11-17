@@ -67,7 +67,11 @@ public class Account_Opening_Form_page {
 	
 	//initilization
 	
+	public Account_Opening_Form_page(WebDriver driver) {
+		PageFactory.initElements(driver, this);
+	}
 
+	//getter and setter methods
 
 	public void setConfsubmitbtn(WebElement confsubmitbtn) {
 		this.confsubmitbtn = confsubmitbtn;
@@ -89,11 +93,6 @@ public class Account_Opening_Form_page {
 	}
 
 
-	public Account_Opening_Form_page(WebDriver driver) {
-		PageFactory.initElements(driver, this);
-	}
-	
-	
 	public WebElement getNametbx() {
 		return nametbx;
 	}

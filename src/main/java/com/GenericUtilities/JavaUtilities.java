@@ -44,8 +44,9 @@ public class JavaUtilities {
 	public String getPopupDigits(String data) {
 		String digit="";
 	    for(int i=0;i<data.length();i++) {
-	    	if(Character.isDigit(data.charAt(i)))
-	    		digit=digit+data.charAt(i);
+	    	char ch=data.charAt(i);
+	    	if(Character.isDigit(ch))
+	    		digit=digit+ch;
 	    }
 	    return digit;
 	}

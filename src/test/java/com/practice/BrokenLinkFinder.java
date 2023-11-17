@@ -18,7 +18,7 @@ public class BrokenLinkFinder {
 		
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver=new ChromeDriver();
-			driver.get("https://flipkart.com/");
+			driver.get("https://google.com/");
 			List<WebElement> links = driver.findElements(By.tagName("a"));
 			int count=links.size();
 			System.out.println(count);

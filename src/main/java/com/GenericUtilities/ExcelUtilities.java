@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.util.*;
 import java.util.Map.Entry;
 
+import org.apache.poi.ss.usermodel.RichTextString;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
@@ -46,8 +47,8 @@ public class ExcelUtilities {
 		FileInputStream fis=new FileInputStream(IPathConstants.excelPath) ;
 		Workbook wb = WorkbookFactory.create(fis);	
 		Sheet sh = wb.getSheet(sheetname);
-	int count=	sh. getLastRowNum();
-	return count;
+	    int count=sh. getLastRowNum();
+	    return count;
 		
 	}
 	/**
@@ -90,20 +91,26 @@ public class ExcelUtilities {
 			driver.findElement(By.name(set.getKey())).sendKeys(set.getValue());
         }
    }
-//   public void writeMultipleDataIntoExcel(String sheetname,int cell,String values) throws Throwable {
-//	   FileInputStream fis=new FileInputStream(IPathConstants.excelPath) ;
-//		Workbook wb = WorkbookFactory.create(fis);	
-//		Sheet sh = wb.getSheet(sheetname);
-//		int count=sh.getLastRowNum();
-//		for(int i=0;i<=count;i++) {
-//			List<String> l=Arrays.asList(values);
-//			sh.getRow(i).createCell(cell).setCellValue(l.get(i));
-//
-//			FileOutputStream fos=new FileOutputStream("./data/getdatafile.xlsx");
-//			wb.write(fos);
-//			wb.close();
-//		}
-  // }
+   
+   
+   
+   public void writeMultipleDataIntoExcel(String sheetname,int cell,ArrayList<String> values) throws Throwable {
+	   FileInputStream fis=new FileInputStream(IPathConstants.excelPath) ;
+		Workbook wb = WorkbookFactory.create(fis);	
+		Sheet sh = wb.getSheet(sheetname);
+		int count=sh.getLastRowNum();
+		for(int i=0;i<=count;i++) {
+			@SuppressWarnings("unchecked")
+			List<ArrayList<String>> l=Arrays.asList(values);
+			sh.getRow(i).createCell(cell).setCellValue((RichTextString) l.get(i));
+
+			FileOutputStream fos=new FileOutputStream("./data/getdatafile.xlsx");
+			wb.write(fos);
+			wb.close();
+		}
+   }
+   
+   
    
    
    public Object[][] readMultipleSetofData() throws Throwable {

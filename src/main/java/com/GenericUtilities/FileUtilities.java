@@ -17,8 +17,8 @@ public class FileUtilities {
 		FileInputStream fis = new FileInputStream(IPathConstants.pFilePath);
 		Properties p=new Properties();
 		p.load(fis);
-		 String value = p.getProperty(key);
-		 return value;
+		String value = p.getProperty(key);
+		return value;
 	}
 
 }

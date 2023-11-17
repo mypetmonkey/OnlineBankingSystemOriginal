@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Credit_Customer_package.CreditcustomerPom">
+      <class name="com.practice.LaunchBrowser">
         <methods>
-          <include name="creditCustomer"/>
-          <include name="openBrowser"/>
-          <include name="closebrowser"/>
+          <include name="test"/>
         </methods>
-      </class> <!-- Credit_Customer_package.CreditcustomerPom -->
+      </class> <!-- com.practice.LaunchBrowser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
