@@ -39,7 +39,7 @@ public static WebDriver sdriver;
 		
 		//String browser=flib.getPropertyFileData("browser");
 		
-		String url=flib.getPropertyFileData("url");
+		
 		
 		if(browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
@@ -57,6 +57,7 @@ public static WebDriver sdriver;
 		
 		sdriver = driver;
 		wlib.maximixeWindow(driver);
+		String url=flib.getPropertyFileData("url");
 		driver.get(url);
 		wlib.waitForPageLoad(driver);
 	}
